@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path 
 from django.conf.urls import url
 from . import views
 
@@ -20,7 +20,9 @@ urlpatterns = [
 	path('' , views.index , name = "ride"),
 	path('submit', views.rideInfo, name = "rideInfo"),
 	path('processsing', views.statusUpdate, name = "statusUpdate"),
+	path('option/' , views.drive_or_ride , name = "option"),
 	path('success', views.rideSuccessful, name = "rideSuccessful"),
+	path('rideHistory', views.rideHistory, name='rideHistory')
 	# path('rideRemove', views.endRide, name = "endRide"),
 ]
 
